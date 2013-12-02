@@ -1,0 +1,17 @@
+<h1>MeTube Video List</h1>
+<ul>
+  <li><%= link_to "Gladiator", video_path('gladiator') %></li>
+  <li><%= link_to "Matilda", video_path('matilda') %></li>
+  <li><%= link_to "Killer Klowns", video_path('klowns') %></li>
+  <li><%= link_to "The Waterboy", video_path('waterboy') %></li>
+  <li><%= link_to "Seinfeld", video_path('seinfeld') %></li>
+  <li><%= link_to "Friends", video_path('friends') %></li>
+  <li><%= link_to "Parks", video_path('parks') %></li>
+</ul>
+
+<h2>View 2 Videos at Once!</h2>
+<ul>
+	<li><%= link_to "Gladiator & Matilda", show_two_path('gladiator','matilda')  %></li>
+	<li><%= link_to "Killer Klowns & Friends", show_two_path('klowns','friends') %> </li>
+	<li><%= link_to "Friends & The Waterboy", show_two_path('friends', 'waterboy') %></li>
+</ul>

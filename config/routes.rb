@@ -1,10 +1,9 @@
 Metube::Application.routes.draw do
-  get 'movies/gladiator' => 'movies#show_gladiator'
-  get 'movies/matilda'   => 'movies#show_matilda'
-  get 'movies/klowns'    => 'movies#show_klowns'
-  get 'movies/waterboy'  => 'movies#show_waterboy'
-  get 'movies/all'       => 'movies#show_all'
-  get 'clips/seinfield'  => 'clips#show_seinfield'
-  get 'clips/friends'    => 'clips#show_friends'
-  get 'clips/parks'      => 'clips#show_parks'
+  
+  root 'videos#show_all'
+
+  get '/videos/:video_name' => 'videos#show',     as: 'video'
+  get '/videos'             => 'videos#show_all', as: 'videos'
+  get '/videos/:video_one_name/:video_two_name' => 'videos#show_two', as: 'show_two'
+  
 end
